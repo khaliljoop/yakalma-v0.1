@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "699740699173",
+    "project_id": "yakalma-yowit",
+    "storage_bucket": "yakalma-yowit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699740699173:android:b4c78b2dff22fc5b5a1dcc",
+        "android_client_info": {
+          "package_name": "com.example.yakalma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6Is_ab_Oai8uc7YvoCqtRKz__PnvIcoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699740699173:android:0e7737ee22a0247a5a1dcc",
+        "android_client_info": {
+          "package_name": "khalil.yakalma.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6Is_ab_Oai8uc7YvoCqtRKz__PnvIcoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

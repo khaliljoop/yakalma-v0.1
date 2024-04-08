@@ -1,0 +1,14 @@
+khalil.yakalma.app-debug-0 C:\MesProjet\Flutter\yakalma-v1.0.3\android\app\src\debug\res
+khalil.yakalma.app-main-1 C:\MesProjet\Flutter\yakalma-v1.0.3\android\app\src\main\res
+khalil.yakalma.app-pngs-2 C:\MesProjet\Flutter\yakalma-v1.0.3\build\app\generated\res\pngs\debug
+khalil.yakalma.app-resValues-3 C:\MesProjet\Flutter\yakalma-v1.0.3\build\app\generated\res\resValues\debug
+khalil.yakalma.app-rs-4 C:\MesProjet\Flutter\yakalma-v1.0.3\build\app\generated\res\rs\debug
+khalil.yakalma.app-mergeDebugResources-5 C:\MesProjet\Flutter\yakalma-v1.0.3\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+khalil.yakalma.app-mergeDebugResources-6 C:\MesProjet\Flutter\yakalma-v1.0.3\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+khalil.yakalma.app-merged_res-7 C:\MesProjet\Flutter\yakalma-v1.0.3\build\app\intermediates\merged_res\debug
+khalil.yakalma.app-packaged_res-8 C:\MesProjet\Flutter\yakalma-v1.0.3\build\path_provider_android\intermediates\packaged_res\debug
+khalil.yakalma.app-packaged_res-9 C:\MesProjet\Flutter\yakalma-v1.0.3\build\sqflite\intermediates\packaged_res\debug
+khalil.yakalma.app-jetified-annotation-experimental-1.1.0-10 C:\Users\ibrah\.gradle\caches\transforms-3\37081f5775e70cbdd20dc6397f05f75b\transformed\jetified-annotation-experimental-1.1.0\res
+khalil.yakalma.app-core-1.6.0-11 C:\Users\ibrah\.gradle\caches\transforms-3\4e5ad1fc7d9e260f5ffc15cd2d562d93\transformed\core-1.6.0\res
+khalil.yakalma.app-jetified-window-java-1.0.0-beta04-12 C:\Users\ibrah\.gradle\caches\transforms-3\51cd90743e70edfefbb6d06eb4f0965f\transformed\jetified-window-java-1.0.0-beta04\res
+khalil.yakalma.app-jetified-window-1.0.0-beta04-13 C:\Users\ibrah\.gradle\caches\transforms-3\880a66cf4ae8ae026fee2686f16a9f93\transformed\jetified-window-1.0.0-beta04\res

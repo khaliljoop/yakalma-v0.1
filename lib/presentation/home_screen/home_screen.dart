@@ -1,4 +1,6 @@
+import 'package:yakalma/models/plat.dart';
 import 'package:yakalma/presentation/frame_five_page/frame_five_page.dart';
+import 'package:yakalma/services/firebaseService.dart';
 import 'package:yakalma/widgets/app_bar/custom_app_bar.dart';
 import 'package:yakalma/widgets/app_bar/appbar_leading_image.dart';
 import 'package:yakalma/widgets/app_bar/appbar_trailing_image.dart';
@@ -21,6 +23,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  FirebaseService firebaseService=FirebaseService();
   TextEditingController searchController = TextEditingController();
 
   GlobalKey<NavigatorState> navigatorKey = GlobalKey();
@@ -294,20 +297,98 @@ class _HomeScreenState extends State<HomeScreen> {
       alignment: Alignment.centerRight,
       child: SizedBox(
         height: 146.v,
-        child: ListView.separated(
-          padding: EdgeInsets.only(left: 21.h),
-          scrollDirection: Axis.horizontal,
-          separatorBuilder: (
-            context,
-            index,
-          ) {
-            return SizedBox(
-              width: 12.h,
-            );
-          },
-          itemCount: 3,
-          itemBuilder: (context, index) {
-            return HomeItemWidget();
+        child: FutureBuilder(future: firebaseService.getPlats(),
+          builder: (BuildContext context, AsyncSnapshot<List<Plat>> plats) {
+            switch (plats.connectionState) {
+              case ConnectionState.waiting:
+                return  Container();
+              default:
+                if (plats.hasData){
+                  if(plats.data!.isNotEmpty){
+                    return ListView.separated(
+                      padding: EdgeInsets.only(left: 21.h),
+                      scrollDirection: Axis.horizontal,
+                      separatorBuilder: (
+                          context,
+                          index,
+                          ) {
+                        return SizedBox(
+                          width: 12.h,
+                        );
+                      },
+                      itemCount: plats.data!.length,
+                      itemBuilder: (context, index) {
+                       // return HomeItemWidget();
+                        return SizedBox(
+                          width: 104.h,
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Container(
+                              padding: EdgeInsets.all(9.h),
+                              decoration: AppDecoration.fillOnPrimary.copyWith(
+                                borderRadius: BorderRadiusStyle.roundedBorder8,
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    height: 85.v,
+                                    width: 84.h,
+                                    margin: EdgeInsets.only(left: 1.h),
+                                    decoration: BoxDecoration(
+                                      color: appTheme.blueGray100,
+                                      borderRadius: BorderRadius.circular(
+                                        8.h,
+                                      ),
+
+                                    ),
+                                    child: Image.network(plats.data![index].photoUrl),
+                                  ),
+
+                                  SizedBox(height: 7.v),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 1.h),
+                                    child: Text(
+                                      //"Honse Food",
+                                      plats.data![index].date_plat,
+                                      style: CustomTextStyles.labelLargeWhiteA700,
+                                    ),
+                                  ),
+                                  SizedBox(height: 4.v),
+                                  Row(
+                                    children: [
+                                      CustomImageView(
+                                        imagePath: ImageConstant.imgLocationWhiteA700,
+                                        height: 12.adaptSize,
+                                        width: 12.adaptSize,
+                                        margin: EdgeInsets.only(bottom: 1.v),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 2.h),
+                                        child: Text(
+                                          "1.1 km away",
+                                          style: CustomTextStyles.bodySmallWhiteA700_1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  }
+                  return Container();
+
+                }
+                else {
+                  return  Container();
+                }
+            }
+
           },
         ),
       ),
